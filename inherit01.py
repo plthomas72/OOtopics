@@ -17,7 +17,7 @@ class Person:
 	def showCount(self):
 		print ("Total population is ", __perCount)
 		
-	def __del__(self)
+	def __del__(self):
 		class_name = self.__class__.__name__
 		print (class_name, " destroyed.")
 		
