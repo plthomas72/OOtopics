@@ -18,6 +18,12 @@ class Vehicle(object):
 
     base_sale_price = 0
     wheels = 0
+    date_of_repair = []
+    cost_of_repair = []
+    num_repairs = 0
+ 
+    def __init__(self, miles, make, model, year, sold_on):
+        self.miles = miles
 
     def __init__(self, miles, make, model, year, sold_on):
         self.miles = miles
@@ -25,6 +31,19 @@ class Vehicle(object):
         self.model = model
         self.year = year
         self.sold_on = sold_on
+    def repair_cost(self, cost, date):
+    """ set up local variables cost_of_repair, date_of_repair
+        make these variables of type list so that each time 
+        a repair occurs, the fact can be retained."""
+        self.cost_of_repair = self.cost_of_repair + [cost]
+        self.date_of_repair = self.date_of_repair + [date]
+        self.num_repairs = self.num_repairs + 1
+
+        i = self.num_repairs
+        for i > 0
+            print "Repair #" i
+            print "Repair cost = " self.cost_of_repair
+            print "Repair date: " self.date_of_repair
 
     def sale_price(self):
         """Return the sale price for this vehicle as a float amount."""
